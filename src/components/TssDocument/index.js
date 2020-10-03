@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Typography from '@material-ui/core/Typography'
 import TextField from '@material-ui/core/TextField'
 import Grid from '@material-ui/core/Grid'
@@ -19,6 +19,7 @@ import post from '../../services/post'
 import get from '../../services/get'
 import LinearIndeterminate from '../Loading'
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
+import operationSuccess from '../../notifications'
 
 const title = {
   color: 'black'
@@ -38,8 +39,7 @@ const TssDocument = () => {
   const [selectedDate, setSelectedDate] = useState(new Date())
   const [moneda, setMoneda] = React.useState('DB')
   const [description, setDescription] = React.useState('')
-
-  const { register, handleSubmit, errors } = useForm();
+  const { register, handleSubmit, errors } = useForm()
 
   const handleDateChange = (date) => {
     setSelectedDate(date);
@@ -65,6 +65,7 @@ const TssDocument = () => {
     setIsLoading(true)
     await post('asientos', data)
     setIsLoading(false)
+    operationSuccess()
   }
 
   async function getJson() {

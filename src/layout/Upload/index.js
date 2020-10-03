@@ -6,6 +6,7 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import post from '../../services/post'
 import LinearIndeterminate from '../../components/Loading'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import operationSuccess from '../../notifications'
 
 const textarea = {
   width: '1480px!important',
@@ -43,6 +44,7 @@ const Upload = () => {
     });
     await post('asientos/guardar-json', { data: data })
     setIsLoading(false)
+    operationSuccess()
   }
 
   return (
