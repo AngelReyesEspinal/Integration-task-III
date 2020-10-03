@@ -25,7 +25,7 @@ const App = () => {
               <Upload />
             </Route>
             <Route path="/">
-              <br/>
+              <br/>  
               <Download />
             </Route>
           </Switch>
