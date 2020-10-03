@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const apiUrl = 'https://2d9643843fb1.ngrok.io/'
+const apiUrl = 'https://bd291e06fa9b.ngrok.io/'
 
 async function get (endpoint) {
     return axios.get(`${apiUrl}${endpoint}`);

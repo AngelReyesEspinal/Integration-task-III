@@ -88,7 +88,7 @@ const TssDocument = () => {
     <div>
       <Typography variant="h5" gutterBottom>
         <span style={title}> 
-          Formulario
+          <strong> ACTIVOS FIJOS 🪑 </strong>
         </span>
       </Typography>
 
