@@ -57,7 +57,7 @@ const Upload = () => {
         </Grid>
         <Grid item xs={12}>
           { 
-            base64 != '' 
+            base64 !== '' 
             ? <div>
                 <h2> El contenido de tu file es: </h2>
                 <TextareaAutosize
