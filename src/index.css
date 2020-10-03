@@ -23,7 +23,7 @@ code {
 }
 
 textarea {
-  width: 1430px!important;
+  width: 100%!important;
   min-height: 50px!important;
   overflow: hidden
 }

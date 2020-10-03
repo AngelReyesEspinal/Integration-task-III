@@ -9,7 +9,7 @@ import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import operationSuccess from '../../notifications'
 
 const textarea = {
-  width: '1480px!important',
+  width: '100%!important',
   height: '200px',
   overflow: 'hidden'
 }
